@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Lengkap Teknologi Layanan Jaringan (TLJ)</title>
+    <style>
+        body {
+            /* Perubahan utama: Background warna pink muda */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #ffeef2; /* Warna pink sangat muda */
+            color: #333; /* Warna teks utama tetap gelap agar kontras */
+        }
+        .container {
+            /* Kontainer diatur ke warna putih agar konten tetap mudah dibaca */
+            max-width: 1000px;
+            margin: auto;
+            background: white; 
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        header {
+            background-color: #cc0066; /* Header dibuat pink lebih tua/maroon untuk kontras */
+            color: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            margin: -30px -30px 20px -30px; 
+        }
+        h1 {
+            margin-top: 0;
+            font-size: 2.2em;
+        }
+        h2 {
+            /* Warna judul disesuaikan agar cocok dengan tema pink/ungu */
+            color: #99004d; 
+            border-bottom: 3px solid #ff3399; 
+            padding-bottom: 8px;
+            margin-top: 40px;
+            font-size: 1.8em;
+        }
+        h3 {
+            color: #cc0066;
+            margin-top: 25px;
+            font-size: 1.4em;
+        }
+        .materi-list {
+            list-style-type: square;
+            margin-left: 25px;
+            padding-left: 0;
+        }
+        .materi-list li {
+            margin-bottom: 8px;
+        }
+        p {
+            text-align: justify;
+        }
+        .karya-siswa {
+            /* Warna karya siswa disesuaikan dengan tema */
+            background-color: #ffdae2;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border-left: 6px solid #ff66a3;
+        }
+        .soal-ujian {
+            border: 1px solid #ff99cc;
+            background-color: #fff0f5; 
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        .jawaban-pilihan {
+            margin-left: 10px;
+            display: block;
+            cursor: pointer;
+            padding: 5px 0;
+        }
+        button[type="submit"] {
+            /* Tombol disesuaikan warnanya */
+            background-color: #ff3399 !important;
+        }
+        footer {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #ccc;
+            text-align: center;
+            font-size: small;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Teknologi Layanan Jaringan (TLJ) 🛠️</h1>
+            <p>Materi Pembelajaran Lengkap dan Detail untuk Keahlian Jaringan</p>
+        </header>
+
+        <section id="pendahuluan">
+            <h2>1. Konsep Dasar Jaringan dan Pengalamatan 🌐</h2>
+            <p>Memahami fondasi dari sebuah layanan jaringan, mulai dari struktur komunikasi hingga sistem pengalamatannya.</p>
+
+            <h3>1.1 Model Referensi Jaringan (OSI dan TCP/IP)</h3>
+            <p>Jaringan bekerja berdasarkan lapisan-lapisan standar untuk memastikan komunikasi antar perangkat berjalan lancar, terlepas dari jenis perangkat kerasnya.</p>
+            <ul class="materi-list">
+                <li>**Model OSI (Open Systems Interconnection):** Memiliki **7 lapisan** (Physical, Data Link, Network, Transport, Session, Presentation, Application). Ini adalah model teoritis.</li>
+                <li>**Model TCP/IP (Transmission Control Protocol/Internet Protocol):** Model yang digunakan secara praktis, terdiri dari **4 lapisan** (Network Access, Internet, Transport, Application).</li>
+                <li>**Fungsi Lapisan Kunci:** Lapisan **Network** (IP addressing), Lapisan **Transport** (TCP/UDP), Lapisan **Application** (Protokol layanan, seperti HTTP, FTP).</li>
+            </ul>
+
+            <h3>1.2 Pengalamatan IP (Internet Protocol)</h3>
+            <p>Setiap perangkat dalam jaringan wajib memiliki alamat unik agar paket data bisa sampai ke tujuan yang benar.</p>
+            <ul class="materi-list">
+                <li>**IP Versi 4 (IPv4):** Terdiri dari 32 bit, format *dotted decimal*. Pembagian menjadi kelas A, B, C, D, dan E.</li>
+                <li>**Subnetting:** Teknik untuk memecah *network address* menjadi sub-network yang lebih kecil dan efisien. Konsep **CIDR** (Classless Inter-Domain Routing).</li>
+                <li>**IP Versi 6 (IPv6):** Terdiri dari 128 bit, format *hexadecimal*. Solusi untuk keterbatasan alamat pada IPv4.</li>
+            </ul>
+        </section>
+
+        <section id="layanan-dasar">
+            <h2>2. Implementasi Layanan Jaringan Esensial ⚙️</h2>
+            <p>Layanan dasar yang wajib ada di setiap infrastruktur jaringan, baik lokal maupun internet.</p>
+            
+            <h3>2.1. Dynamic Host Configuration Protocol (DHCP) Server</h3>
+            <p>DHCP adalah layanan yang bertugas mendistribusikan IP Address, Subnet Mask, Gateway, dan DNS Server secara otomatis kepada klien. Ini mengurangi beban administrasi jaringan.</p>
+            <ul class="materi-list">
+                <li>**Konsep *Lease Time*:** Durasi sewa IP Address oleh klien.</li>
+                <li>**DHCP *Scope*:** Batasan range IP Address yang akan dibagikan.</li>
+                <li>**DHCP *Exclusion*:** Daftar IP Address yang tidak boleh dibagikan.</li>
+            </ul>
+            
+            <h3>2.2. Domain Name System (DNS) Server</h3>
+            <p>Fungsi utamanya adalah sebagai "penerjemah" dari Nama Domain (contoh: google.com) menjadi IP Address (contoh: 172.217.16.14). Tanpa DNS, kita harus mengingat IP setiap situs.</p>
+            <ul class="materi-list">
+                <li>**Zonasi DNS:** *Forward Look-up Zone* (Nama ke IP) dan *Reverse Look-up Zone* (IP ke Nama).</li>
+                <li>**Record Penting:** A record (host address), CNAME record (alias), MX record (mail exchanger).</li>
+            </ul>
+
+            <h3>2.3. Web Server (HTTP/HTTPS)</h3>
+            <p>Layanan yang menggunakan protokol **HTTP (Hypertext Transfer Protocol)** untuk mengirimkan halaman web ke browser klien. Umumnya menggunakan perangkat lunak seperti Apache, Nginx, atau IIS.</p>
+            <ul class="materi-list">
+                <li>**Virtual Host:** Meng-hosting lebih dari satu domain dalam satu server fisik.</li>
+                <li>**HTTPS:** Versi aman dari HTTP, menggunakan protokol **SSL/TLS** untuk enkripsi data.</li>
+            </ul>
+        </section>
+
+        <section id="voip">
+            <h2>3. Teknologi Voice over Internet Protocol (VoIP) 📞</h2>
+            <p>VoIP adalah teknologi yang memungkinkan transmisi suara (panggilan telepon) melalui jaringan Internet Protocol (IP). Ini adalah salah satu layanan jaringan paling modern.</p>
+            
+            <h3>3.1. Arsitektur dan Protokol VoIP</h3>
+            <p>Komunikasi VoIP memerlukan *signaling protocol* untuk memulai, memodifikasi, dan mengakhiri sesi panggilan, serta *media protocol* untuk membawa data suara.</p>
+            <ul class="materi-list">
+                <li>**Signaling Protocol Utama:** **SIP (Session Initiation Protocol)** yang ringan dan populer.</li>
+                <li>**Media Protocol:** **RTP (Real-time Transport Protocol)** untuk membawa paket data suara.</li>
+                <li>**Codec:** Algoritma yang digunakan untuk mengompresi dan mendekompresi sinyal suara (misalnya G.711, G.729).</li>
+            </ul>
+
+            <h3>3.2. Konfigurasi Server PBX (Private Branch Exchange)</h3>
+            <p>PBX server (seperti Asterisk atau FreePBX) berfungsi sebagai pusat kontrol panggilan telepon di dalam suatu organisasi.</p>
+            <ul class="materi-list">
+                <li>**Ekstensi:** Nomor unik untuk setiap pengguna/perangkat di dalam jaringan PBX.</li>
+                <li>**Dial Plan:** Aturan dan skema penomoran yang menentukan bagaimana panggilan diarahkan.</li>
+            </ul>
+        </section>
+
+        <section id="manajemen-keamanan">
+            <h2>4. Manajemen dan Keamanan Jaringan 🛡️</h2>
+            <p>Layanan yang berfokus pada kontrol lalu lintas data dan proteksi jaringan dari ancaman luar.</p>
+
+            <h3>4.1. Router dan NAT (Network Address Translation)</h3>
+            <p>Router berfungsi menghubungkan dua network atau lebih. NAT adalah layanan yang memungkinkan banyak perangkat di jaringan lokal berbagi satu IP publik untuk akses internet.</p>
+            
+            <h3>4.2. Firewall dan Filtering</h3>
+            <p>Firewall berfungsi sebagai pagar pembatas antara jaringan internal dan eksternal. Firewall dapat berbasis perangkat keras (Hardware) atau perangkat lunak (Software).</p>
+            <ul class="materi-list">
+                <li>**Konsep *Chain* dan *Rule*:** Urutan aturan (rules) dalam sebuah firewall (Input, Output, Forward).</li>
+                <li>**Filtering:** Memblokir atau mengizinkan lalu lintas berdasarkan IP Address, Port, atau Protokol.</li>
+            </ul>
+
+            <h3>4.3. Bandwidth Management</h3>
+            <p>Mengelola dan membatasi kecepatan transfer data setiap pengguna atau layanan agar tidak ada satu pengguna pun yang memonopoli bandwidth.</p>
+            <ul class="materi-list">
+                <li>**Queue:** Mekanisme antrian untuk mengontrol paket data. (Misalnya, Simple Queue atau Queue Tree).</li>
+                <li>**Burst:** Pemberian kecepatan tinggi sesaat untuk meningkatkan pengalaman pengguna.</li>
+            </ul>
+        </section>
+        
+        <hr>
+        
+        <section id="karya-siswa">
+            <h2>5. Galeri Karya Siswa Terbaik 🏆</h2>
+            <p>Apresiasi atas proyek-proyek inovatif yang dihasilkan oleh siswa dalam mengimplementasikan materi TLJ.</p>
+            
+            <div class="karya-siswa">
+                <h3>Proyek Implementasi *Hotspot System* dengan Radius Server</h3>
+                <p><strong>Dibuat oleh:</strong> **Silva Maulidia** (TKJ 2)</p>
+                <p>Proyek ini mencakup konfigurasi router sebagai *Hotspot Gateway* yang terintegrasi dengan Radius Server (seperti FreeRADIUS) untuk autentikasi pengguna dengan sistem *voucher* dan manajemen *user profile* yang ketat. Kinerja jaringan dijamin stabil dan aman.</p>
+            </div>
+        </section>
+
+        <section id="ujian-soal">
+            <h2>6. Ujian Soal TLJ (Latihan Pilihan Ganda) 📝</h2>
+            <p>Uji pemahaman Anda. Pilih salah satu jawaban yang paling tepat.</p>
+
+            <form action="#" method="post"> 
+                
+                <div class="soal-ujian">
+                    <p><strong>1.</strong> Pada Model OSI, lapisan yang bertugas melakukan konversi format data (enkripsi/deskripsi) adalah lapisan...</p>
+                    <label class="jawaban-pilihan"><input type="radio" name="soal1" value="a"> A. Network</label>
+                    <label class="jawaban-pilihan"><input type="radio" name="soal1" value="b"> B. Session</label>
+                    <label class="jawaban-pilihan"><input type="radio" name="soal1" value="c"> C. Presentation</label>
+                    <label class="jawaban-pilihan"><input type="radio" name="soal1" value="d"> D. Application</label>
+                </div>
+
+                <div class="soal-ujian">
+                    <p><strong>2.</strong> Protokol yang harus dikonfigurasi pada *router* agar perangkat di jaringan lokal dapat mengakses internet melalui satu IP publik adalah...</p>
+                    <label class="jawaban-pilihan"><input type="radio" name="soal2" value="a"> A. DHCP</label>
+                    <label class="jawaban-pilihan"><input type="radio" name="soal2" value="b"> B. NAT</label>
+                    <label class="jawaban-pilihan"><input type="radio" name="soal2" value="c"> C. DNS</label>
+                    <label class="jawaban-pilihan"><input type="radio" name="soal2" value="d"> D. FTP</label>
+                </div>
+
+                <div class="soal-ujian">
+                    <p><strong>3.</strong> Server yang berfungsi sebagai pusat pertukaran sinyal panggilan suara pada teknologi VoIP adalah...</p>
+                    <label class="jawaban-pilihan"><input type="radio" name="soal3" value="a"> A. Proxy Server</label>
+                    <label class="jawaban-pilihan"><input type="radio" name="soal3" value="b"> B. PBX Server</label>
+                    <label class="jawaban-pilihan"><input type="radio" name="soal3" value="c"> C. Web Server</label>
+                    <label class="jawaban-pilihan"><input type="radio" name="soal3" value="d"> D. Mail Server</label>
+                </div>
+
+                <div class="soal-ujian">
+                    <p><strong>4.</strong> Manakah teknik *subnetting* yang memungkinkan kita menggunakan *prefix* atau *netmask* yang berbeda-beda dalam satu *network*?</p>
+                    <label class="jawaban-pilihan"><input type="radio" name="soal4" value="a"> A. FLSM (Fixed Length Subnet Mask)</label>
+                    <label class="jawaban-pilihan"><input type="radio" name="soal4" value="b"> B. TCP/IP</label>
+                    <label class="jawaban-pilihan"><input type="radio" name="soal4" value="c"> C. VLSM (Variable Length Subnet Mask)</label>
+                    <label class="jawaban-pilihan"><input type="radio" name="soal4" value="d"> D. CIDR</label>
+                </div>
+                
+                <button type="submit" style="padding: 12px 25px; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 1.1em; margin-top: 15px;">Kirim dan Cek Jawaban</button>
+            </form>
+        </section>
+
+
+        <footer>
+            <hr>
+            <p>&copy; 2025 Materi TLJ Lengkap - Dikembangkan untuk Pembelajaran Jaringan</p>
+        </footer>
+    </div>
+</body>
+</html>
